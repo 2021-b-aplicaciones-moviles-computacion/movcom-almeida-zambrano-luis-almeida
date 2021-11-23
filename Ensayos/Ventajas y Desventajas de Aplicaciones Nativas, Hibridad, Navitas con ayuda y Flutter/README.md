@@ -11,7 +11,7 @@ Cada aplicación nativa tiene recursos definidos por el sistema operativo, estos
 - Windows Phone: .Net o C++
 
 La descarga de estas aplicaciones se realiza desde las diferentes Tiendas de Aplicaciones que implemente el sistema operativo
-- 👉 Las aplicaciones nativas están capacitadas para adaptarse al 100% a las funcionalidades del móvil y acceder a la mayoría de características hardware
+- 👉 Las aplicaciones nativas están capacitadas para adaptarse al 100% a las funcionalidades del móvil y acceder a la mayoría de características hardware.
 - ❌ El mayor inconveniente que podemos encontrar en el desarrollo de una aplicación nativa es que tiene un coste más elevado. Eso hace que su precio se multiplique, dependiendo de los sistemas a los que queramos adaptar nuestra aplicación.
 
 
@@ -21,8 +21,8 @@ Las aplicaciones hibridas son aquellas que combinan elementos de aplicaciones we
 
 Las aplicaciones híbridas son populares porque permiten a los desarrolladores escribir código para una aplicación móvil una vez y aún se adaptan a múltiples plataformas. Debido a que las aplicaciones híbridas agregan una capa adicional entre el código fuente y la plataforma de destino, pueden funcionar un poco más lento que las versiones nativas o web de la misma aplicación.
 
-- ✅ Las aplicaciones hibridas poseen un tiempo de combinación mucho más rápido que las aplicaciones nativas, reducen costos al momento de desarrollo y son más fáciles de actualizar
--❌ La apariencia puede variar entre dos sistemas operativos diferentes, la experiencia de usuario se ve afectada puesto que requiere probar en un número considerable de dispositivos. Además, se ven afectadas en el rendimiento puesto que dependen de un navegador para su correcto funcionamiento
+- ✅ Las aplicaciones hibridas poseen un tiempo de combinación mucho más rápido que las aplicaciones nativas, reducen costos al momento de desarrollo y son más fáciles de actualizar.
+- ❌ La apariencia puede variar entre dos sistemas operativos diferentes, la experiencia de usuario se ve afectada puesto que requiere probar en un número considerable de dispositivos. Además, se ven afectadas en el rendimiento puesto que dependen de un navegador para su correcto funcionamiento
 
 
 # Aplicaciones Nativas con ayuda (Multiplataforma)
@@ -31,9 +31,9 @@ El desarrollo multiplataforma procura optimizar la relación costo/beneficio com
 
 Las aplicaciones móviles multiplataforma son aquellas que se desarrollan en un lenguaje de programación general y que luego se puede «compilar» o «exportar» a cualquier plataforma o dispositivo con unos cambios mínimos. Es una manera de abaratar costes de desarrollo y mantenimiento, ya que generar aplicaciones móviles de forma nativa implica programar en diferentes lenguajes y entornos para cada sistema operativo (iOS, Android, Windows)
 
-- ✅ Aumentan la reutilización de código y disminuyen los costos de producción
+- ✅ Aumentan la reutilización de código y disminuyen los costos de producción.
 - ❌ Depende de un alto grado de compatibilidad con los sistemas dependiendo de las versiones base del sistema donde serán instaladas.
-- ❌ El proceso para ingresar a las diversas tiendas de Aplicaciones se complica, puesto que cada una pone clausulas diferentes
+- ❌ El proceso para ingresar a las diversas tiendas de Aplicaciones se complica, puesto que cada una pone clausulas diferentes.
 
 # Aplicaciones con Flutter
 
