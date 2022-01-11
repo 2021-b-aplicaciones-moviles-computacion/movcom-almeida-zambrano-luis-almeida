@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ti_nombre_certificado"
+            android:id="@+id/ti_nombre_persona"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/txt_addNombre"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ly_nombre_certificado">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ti_addedad"
+            android:id="@+id/ti_edad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/txt_addEdad"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ly_add_edad">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ti_addmail"
+            android:id="@+id/ti_mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/txt_add_mail"
@@ -76,7 +76,7 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_AddCertificado"
+        android:id="@+id/btn_Editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -99,7 +99,7 @@
         android:text="@string/txt_cancelar"
         app:backgroundTintMode="screen"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_AddCertificado"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Editar"
         app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ly_add_mail" />

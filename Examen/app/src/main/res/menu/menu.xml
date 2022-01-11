@@ -5,7 +5,7 @@
         android:id="@+id/mn_ver"
         android:title="@string/mn_certificado" />
     <item
-        android:id="@+id/mn_certificado_eliminar"
+        android:id="@+id/mn_editar"
         android:title="@string/mn_editar" />
     <item
         android:id="@+id/mn_eliminar"

@@ -5,7 +5,7 @@ import android.os.Parcelable
 
 class Persona (
     val id_persona: Int,
-    val nombre: String?,
+    var nombre: String?,
     var edad: String?,
     var correo: String?
     ) : Parcelable {

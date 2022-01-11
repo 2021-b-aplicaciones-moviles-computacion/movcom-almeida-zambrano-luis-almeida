@@ -66,21 +66,21 @@ class home_app : AppCompatActivity() {
     override fun onContextItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.mn_ver -> {
-                Log.i("context-menu", "Pokemons: ${idItemSelected}")
+                Log.i("context-menu", "Certificado: ${idItemSelected}")
                 abrirActividadConParametros(GUI_Certificados::class.java)
                 return true
             }
 
-//            R.id.mn_certificado_eliminar -> {
-//                Log.i("context-menu", "Edit position: ${idItemSelected}")
-//                abrirActividadConParametros(GUI_EditarEntrenador::class.java)
-//                return true
-//            }
-//            R.id.mn_eliminar -> {
-//                Log.i("context-menu", "Delete position: ${idItemSelected}")
-//                eliminarEntrenador(idItemSeleccionado)
-//                return true
-//            }
+            R.id.mn_editar -> {
+                Log.i("context-menu", "Edit position: ${idItemSelected}")
+                abrirActividadConParametros(GUI_EditarPersona::class.java)
+                return true
+            }
+            R.id.mn_eliminar -> {
+                Log.i("context-menu", "Delete position: ${idItemSelected}")
+                eliminarPersona(idItemSelected)
+                return true
+            }
 
             else -> super.onContextItemSelected(item)
         }
@@ -92,5 +92,33 @@ class home_app : AppCompatActivity() {
         val intentEditarCertificado = Intent(this, clase)
         intentEditarCertificado.putExtra("posEditar", idItemSelected)
         startActivity(intentEditarCertificado)
+    }
+
+    fun eliminarPersona(
+        posPersonaDelete: Int
+    ) {
+        val lv_personas = findViewById<ListView>(R.id.lv_personas)
+
+        var personaDelete = BDMemoria.arr_persona.elementAt(posPersonaDelete)
+        var idPersonaDele = personaDelete.id_persona
+
+        var dummy_list = arrayListOf<Persona_x_Certificado>()
+
+        BDMemoria.arr_persona_x_certificado.forEachIndexed{ indice: Int, personaxcertificado: Persona_x_Certificado ->
+            if(idPersonaDele != personaxcertificado.id_persona){
+                dummy_list.add(personaxcertificado)
+            }
+        }
+
+        BDMemoria.arr_persona.removeAt(posPersonaDelete)
+        BDMemoria.arr_persona_x_certificado = dummy_list
+
+        val adaptador = ArrayAdapter(
+            this,
+            android.R.layout.simple_list_item_1,
+            BDMemoria.arr_persona
+        )
+        lv_personas.adapter = adaptador
+        adaptador.notifyDataSetChanged()
     }
 }

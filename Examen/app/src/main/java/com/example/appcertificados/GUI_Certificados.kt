@@ -59,7 +59,7 @@ class GUI_Certificados : AppCompatActivity() {
 
         posPersona = intent.getIntExtra("posEditar",1)
 
-        Log.i("posEntrendaor","${posPersona}")
+        Log.i("posPersona","${posPersona}")
 
         var idCertificado = arrayListOf<Int>()
 
@@ -69,7 +69,7 @@ class GUI_Certificados : AppCompatActivity() {
             Log.i("testExamen","${persona.id_persona} -> ${persona.nombre}")
             if (indice == posPersona){
                 idPersonaOwner = persona.id_persona
-                var label = "Entrenador: ${persona.nombre}"
+                var label = "Persona: ${persona.nombre}"
                 tv_nombre.setText(label)
             }
         }
