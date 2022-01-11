@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppCertificados</string>
+    <string name="saludo_app">Examen IBim - Almeida Luis</string>
+    <string name="str_iniciar_app">Iniciar la aplicación</string>
+    <string name="str_personas">Lista de \nPersonas</string>
+    <string name="add_element">+</string>
+</resources>
