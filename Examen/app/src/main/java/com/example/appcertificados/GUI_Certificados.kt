@@ -65,6 +65,7 @@ class GUI_Certificados : AppCompatActivity() {
 
         val tv_nombre = findViewById<TextView>(R.id.tv_nombre)
 
+
         BDMemoria.arr_persona.forEachIndexed{ indice: Int, persona : Persona ->
             Log.i("testExamen","${persona.id_persona} -> ${persona.nombre}")
             if (indice == posPersona){
@@ -136,7 +137,7 @@ class GUI_Certificados : AppCompatActivity() {
         inflater.inflate(R.menu.mn_certificado, menu)
         val info = menuInfo as AdapterView.AdapterContextMenuInfo
         val id = info.position
-        var nombre_curso: String = list_certificado.elementAt(id)
+        val nombre_curso: String = list_certificado.elementAt(id)
         BDMemoria.arr_certificado.forEach{ certificado: Certificado ->
             if(nombre_curso == certificado.nombre_curso){
                 idItemSeleccionado = certificado.id_certificado
@@ -191,7 +192,7 @@ class GUI_Certificados : AppCompatActivity() {
             }
         }
 
-        var list_certificados_restantes = arrayListOf<Persona_x_Certificado>()
+        val list_certificados_restantes = arrayListOf<Persona_x_Certificado>()
         Log.i("idCertificadoAeliminar","${idCertificadoAeliminar}")
 
         BDMemoria.arr_persona_x_certificado.forEachIndexed{ indice: Int, PersonaxCertificado: Persona_x_Certificado->
