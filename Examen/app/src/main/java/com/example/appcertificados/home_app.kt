@@ -67,22 +67,30 @@ class home_app : AppCompatActivity() {
         return when (item.itemId) {
             R.id.mn_ver -> {
                 Log.i("context-menu", "Pokemons: ${idItemSelected}")
-                abrirActividadConParametros(GUI_Pokemon::class.java)
+                abrirActividadConParametros(GUI_Certificados::class.java)
                 return true
             }
 
-            R.id.mn_certificado_eliminar -> {
-                Log.i("context-menu", "Edit position: ${idItemSelected}")
-                abrirActividadConParametros(GUI_EditarEntrenador::class.java)
-                return true
-            }
-            R.id.mn_eliminar -> {
-                Log.i("context-menu", "Delete position: ${idItemSelected}")
-                eliminarEntrenador(idItemSeleccionado)
-                return true
-            }
+//            R.id.mn_certificado_eliminar -> {
+//                Log.i("context-menu", "Edit position: ${idItemSelected}")
+//                abrirActividadConParametros(GUI_EditarEntrenador::class.java)
+//                return true
+//            }
+//            R.id.mn_eliminar -> {
+//                Log.i("context-menu", "Delete position: ${idItemSelected}")
+//                eliminarEntrenador(idItemSeleccionado)
+//                return true
+//            }
 
             else -> super.onContextItemSelected(item)
         }
+    }
+
+    fun abrirActividadConParametros(
+        clase: Class<*>
+    ) {
+        val intentEditarCertificado = Intent(this, clase)
+        intentEditarCertificado.putExtra("Pos Editar", idItemSelected)
+        startActivity(intentEditarCertificado)
     }
 }
