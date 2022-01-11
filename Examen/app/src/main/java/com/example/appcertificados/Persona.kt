@@ -4,7 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 
 class Persona (
-    val id_Persona: Int,
+    val id_persona: Int,
     val nombre: String?,
     var edad: String?,
     var correo: String?
@@ -21,7 +21,7 @@ class Persona (
     ){}
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeInt(id_Persona)
+        parcel.writeInt(id_persona)
         parcel.writeString(nombre)
         parcel.writeString(edad)
         parcel.writeString(correo)

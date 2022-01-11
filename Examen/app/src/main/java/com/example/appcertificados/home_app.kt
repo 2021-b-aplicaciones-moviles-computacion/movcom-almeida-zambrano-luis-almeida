@@ -1,9 +1,11 @@
 package com.example.appcertificados
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.ListView
 
 class home_app : AppCompatActivity() {
@@ -25,6 +27,20 @@ class home_app : AppCompatActivity() {
 
         // Instanciamos la ListView de la GUI
         val lv_personas = findViewById<ListView>(R.id.lv_personas)
+
+        val adaptador = ArrayAdapter(
+            this,
+            android.R.layout.simple_list_item_1,
+            BDMemoria.arr_persona
+        )
+        lv_personas.adapter = adaptador
+        adaptador.notifyDataSetChanged()
+        this.registerForContextMenu(lv_personas)
+
+        // Instanciamos el Boton para añadir una persona
+        val btn_AddPersona = findViewById<Button>(R.id.btn_AddPersona)
+        btn_AddPersona.setOnClickListener {
+        }
 
 
     }

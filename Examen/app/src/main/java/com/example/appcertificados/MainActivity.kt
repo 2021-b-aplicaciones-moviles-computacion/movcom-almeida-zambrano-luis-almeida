@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         //Instanciamos el boton de inicio de la aplicación
 
-        val btn_IniciarApp = findViewById<Button>(R.id.btn_AddElement)
+        val btn_IniciarApp = findViewById<Button>(R.id.btn_AddPersona)
         btn_IniciarApp.setOnClickListener{
             //Conectamos el intent con la activity de home
             val intent = Intent(this, home_app::class.java)
