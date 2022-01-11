@@ -45,6 +45,8 @@ class GUI_Certificados : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gui_certificados)
+
+
     }
 
 
@@ -55,7 +57,7 @@ class GUI_Certificados : AppCompatActivity() {
 
         list_certificado = arrayListOf()
 
-        posPersona = intent.getIntExtra("Editar Persona",1)
+        posPersona = intent.getIntExtra("posEditar",1)
 
         Log.i("posEntrendaor","${posPersona}")
 
@@ -96,24 +98,29 @@ class GUI_Certificados : AppCompatActivity() {
         lv_certificados.adapter = adaptador
         adaptador.notifyDataSetChanged()
 
+        val btn_Reload = findViewById<Button>(R.id.btn_Reload)
+
         val btn_AddCertificado = findViewById<Button>(R.id.btn_AddCertificado)
         btn_AddCertificado.setOnClickListener {
             abrirActividadAddCertificado(Gui_AddCertificado::class.java)
+            btn_Reload.setVisibility(View.VISIBLE);
         }
 
         val btn_Cancelar = findViewById<Button>(R.id.btn_Cancelar)
         btn_Cancelar.setOnClickListener {
             val intent = Intent(this, home_app::class.java)
+            btn_Reload.setVisibility(View.INVISIBLE);
             startActivity(intent)
         }
 
+
+
         //BOTON PARA ACTUALIZAR LA LISTA
-        //val btnListBD = findViewById<Button>(R.id.btn_ListBD)
-        //btnListBD.setOnClickListener {
-            //BDMemoria.arr_persona_x_certificado.forEach{PersonaxCertificado: Persona_x_Certificado ->
-                //Log.i("More Certificados","${PersonaxCertificado.id_persona} -> ${PersonaxCertificado.id_certificado}")
-            //}
-        //}
+        btn_Reload.setOnClickListener {
+            BDMemoria.arr_persona_x_certificado.forEach{PersonaxCertificado: Persona_x_Certificado ->
+                Log.i("More Certificados","${PersonaxCertificado.id_persona} -> ${PersonaxCertificado.id_certificado}")
+            }
+        }
 
         this.registerForContextMenu(lv_certificados)
         lv_certificados.updatePadding(left = 40)
@@ -167,7 +174,7 @@ class GUI_Certificados : AppCompatActivity() {
         clase: Class<*>
     ) {
         val intentAddNewCertificado = Intent(this, clase)
-        intentAddNewCertificado.putExtra("posicionPersona",posPersona)
+        intentAddNewCertificado.putExtra("posPersona",posPersona)
         Log.i("positionSend","${posPersona}")
         AddNewCertificado.launch(intentAddNewCertificado)
     }

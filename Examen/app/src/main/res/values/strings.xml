@@ -18,6 +18,7 @@
     <string name="str_nombre">Nombre Apellido</string>
 
     <string name="str_crear">Crear</string>
+    <string name="str_edit_persona">Editar Persona</string>
     <string name="str_add_certificado">Añadir Certificado</string>
     <string name="str_edit_certificado">Editar Certificado</string>
     <string name="str_nombre_certificado">Nombre del Certificado</string>

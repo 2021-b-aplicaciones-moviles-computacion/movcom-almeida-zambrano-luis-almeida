@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCertificados">
         <activity
+            android:name=".GUI_EditarPersona"
+            android:exported="false" />
+        <activity
             android:name=".Gui_AddCertificado"
             android:exported="false" />
         <activity

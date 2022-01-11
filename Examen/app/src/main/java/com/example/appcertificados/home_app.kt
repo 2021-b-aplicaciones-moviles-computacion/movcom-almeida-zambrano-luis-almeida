@@ -42,7 +42,7 @@ class home_app : AppCompatActivity() {
         this.registerForContextMenu(lv_personas)
 
         // Instanciamos el Boton para añadir una persona
-        val btn_AddPersona = findViewById<Button>(R.id.btn_AddCertificado)
+        val btn_AddPersona = findViewById<Button>(R.id.btn_AddPersona)
         btn_AddPersona.setOnClickListener {
             val intentAddPersona = Intent(this, Add_Persona::class.java)
             startActivity(intentAddPersona)
@@ -90,7 +90,7 @@ class home_app : AppCompatActivity() {
         clase: Class<*>
     ) {
         val intentEditarCertificado = Intent(this, clase)
-        intentEditarCertificado.putExtra("Pos Editar", idItemSelected)
+        intentEditarCertificado.putExtra("posEditar", idItemSelected)
         startActivity(intentEditarCertificado)
     }
 }
