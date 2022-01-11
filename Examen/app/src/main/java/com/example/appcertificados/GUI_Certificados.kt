@@ -136,21 +136,21 @@ class GUI_Certificados : AppCompatActivity() {
         Log.i("idCertificado", "ID ${idItemSeleccionado}")
     }
 
-//    override fun onContextItemSelected(item: MenuItem): Boolean {
-//        return when (item.itemId) {
-//            R.id.mn_certificado_editar -> {
-//                Log.i("context-menu", "Edit position: ${idItemSeleccionado}")
-//                abrirActividadEditarPokemon(GUI_EditarPokemon::class.java)
-//                return true
-//            }
-//            R.id.mi_eliminarPokemon -> {
-//                Log.i("context-menu", "Delete position: ${idItemSeleccionado}")
-//                eliminarPokemon(idItemSeleccionado)
-//                return true
-//            }
-//            else -> super.onContextItemSelected(item)
-//        }
-//    }
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.mn_certificado_editar -> {
+                Log.i("context-menu", "Edit position: ${idItemSeleccionado}")
+                abrirActividadEditarCertificado(Edit_Certificados_GUI::class.java)
+                return true
+            }
+            R.id.mn_certificado_eliminar -> {
+                Log.i("context-menu", "Delete position: ${idItemSeleccionado}")
+                eliminarCertificado(idItemSeleccionado)
+                return true
+            }
+            else -> super.onContextItemSelected(item)
+        }
+    }
 
     fun abrirActividadEditarCertificado(
         clase: Class<*>
@@ -165,12 +165,12 @@ class GUI_Certificados : AppCompatActivity() {
         clase: Class<*>
     ) {
         val intentAddNewCertificado = Intent(this, clase)
-        intentAddNewCertificado.putExtra("posicionEntrenador",posPersona)
+        intentAddNewCertificado.putExtra("posicionPersona",posPersona)
         Log.i("positionSend","${posPersona}")
         AddNewCertificado.launch(intentAddNewCertificado)
     }
 
-    fun eliminarPokemon(
+    fun eliminarCertificado(
         idCertificadoAeliminar: Int
     ){
         val  lv_certificados= findViewById<ListView>(R.id.lv_certificados)

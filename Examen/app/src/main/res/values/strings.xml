@@ -18,5 +18,11 @@
     <string name="str_nombre">Nombre Apellido</string>
 
     <string name="str_crear">Crear</string>
+    <string name="str_edit_certificado">Editar Certificado</string>
+    <string name="str_nombre_certificado">Nombre del Certificado</string>
+    <string name="str_nombre_plataforma">Nombre de la Plataforma</string>
+    <string name="str_fecha_certificado">Fecha de Obtención</string>
+    <string name="str_editar">Editar</string>
+
 
 </resources>

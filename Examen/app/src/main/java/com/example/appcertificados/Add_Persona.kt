@@ -35,7 +35,7 @@ class Add_Persona : AppCompatActivity() {
 
         nextId = lastId+1
 
-        var txt_nombre = findViewById<TextInputEditText>(R.id.ti_addnombre)
+        var txt_nombre = findViewById<TextInputEditText>(R.id.ti_nombre_certificado)
         var txt_edad = findViewById<TextInputEditText>(R.id.ti_addedad)
         var txt_mail = findViewById<TextInputEditText>(R.id.ti_addmail)
 

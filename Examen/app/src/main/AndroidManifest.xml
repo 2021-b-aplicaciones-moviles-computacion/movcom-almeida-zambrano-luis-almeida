@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCertificados">
         <activity
+            android:name=".Gui_AddCertificado"
+            android:exported="false" />
+        <activity
+            android:name=".Edit_Certificados_GUI"
+            android:exported="false" />
+        <activity
             android:name=".GUI_Certificados"
             android:exported="false" />
         <activity
