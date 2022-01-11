@@ -10,6 +10,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.view.updatePadding
 
 class GUI_Certificados : AppCompatActivity() {
 
@@ -97,13 +98,13 @@ class GUI_Certificados : AppCompatActivity() {
 
         val btn_AddCertificado = findViewById<Button>(R.id.btn_AddCertificado)
         btn_AddCertificado.setOnClickListener {
-            //abrirActividadAddPokemon(GUI_AnadirPokemon::class.java)
+            abrirActividadAddCertificado(Gui_AddCertificado::class.java)
         }
 
         val btn_Cancelar = findViewById<Button>(R.id.btn_Cancelar)
         btn_Cancelar.setOnClickListener {
-            //val intentAtrasPokemon = Intent(this, GUI_Home::class.java)
-            //startActivity(intentAtrasPokemon)
+            val intent = Intent(this, home_app::class.java)
+            startActivity(intent)
         }
 
         //BOTON PARA ACTUALIZAR LA LISTA
@@ -115,6 +116,7 @@ class GUI_Certificados : AppCompatActivity() {
         //}
 
         this.registerForContextMenu(lv_certificados)
+        lv_certificados.updatePadding(left = 40)
     }
 
     override fun onCreateContextMenu(
