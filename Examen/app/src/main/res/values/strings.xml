@@ -4,4 +4,19 @@
     <string name="str_iniciar_app">Iniciar la aplicación</string>
     <string name="str_personas">Lista de \nPersonas</string>
     <string name="add_element">+</string>
+    <string name="add_persona">Agrega una persona a la lista</string>
+    <string name="txt_addNombre">Ingresa su nombre</string>
+    <string name="txt_addEdad">Ingresa su edad</string>
+    <string name="txt_add_mail">Ingresa su mail</string>
+    <string name="txt_add">Añadir</string>
+    <string name="txt_cancelar">Cancelar</string>
+    <string name="mn_certificado">Ver Certificados</string>
+    <string name="mn_editar">Editar</string>
+    <string name="mn_eliminar">Eliminar</string>
+
+    <string name="str_Certificados">Certificados</string>
+    <string name="str_nombre">Nombre Apellido</string>
+
+    <string name="str_crear">Crear</string>
+
 </resources>

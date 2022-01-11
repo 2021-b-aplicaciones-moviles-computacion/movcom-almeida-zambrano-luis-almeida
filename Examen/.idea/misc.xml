@@ -4,8 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/Examen/app/src/main/res/drawable/bakcground_gradient.xml" value="0.22552083333333334" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/Examen/app/src/main/res/layout/activity_add_persona.xml" value="0.33" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/Examen/app/src/main/res/layout/activity_gui_certificados.xml" value="1.25" />
         <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/Examen/app/src/main/res/layout/activity_home_app.xml" value="0.25" />
         <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/Examen/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/Examen/app/src/main/res/menu/manu.xml" value="0.209375" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/Examen/app/src/main/res/menu/menu.xml" value="0.209375" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/Examen/app/src/main/res/menu/mn_certificado.xml" value="0.209375" />
       </map>
     </option>
   </component>
