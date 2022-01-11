@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCertificados">
         <activity
+            android:name=".Add_Persona"
+            android:exported="false" />
+        <activity
             android:name=".home_app"
             android:exported="false" />
         <activity

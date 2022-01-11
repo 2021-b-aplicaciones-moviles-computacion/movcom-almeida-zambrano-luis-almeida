@@ -41,7 +41,5 @@ class home_app : AppCompatActivity() {
         val btn_AddPersona = findViewById<Button>(R.id.btn_AddPersona)
         btn_AddPersona.setOnClickListener {
         }
-
-
     }
 }

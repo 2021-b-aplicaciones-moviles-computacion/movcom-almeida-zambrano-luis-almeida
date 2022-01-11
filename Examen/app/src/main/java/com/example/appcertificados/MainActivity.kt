@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         btn_IniciarApp.setOnClickListener{
             //Conectamos el intent con la activity de home
             val intent = Intent(this, home_app::class.java)
+            startActivity(intent)
         }
     }
 }
