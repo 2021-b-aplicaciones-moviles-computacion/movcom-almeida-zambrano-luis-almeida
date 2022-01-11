@@ -1,5 +1,6 @@
 package com.example.appcertificados
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -13,7 +14,8 @@ class MainActivity : AppCompatActivity() {
 
         val btn_IniciarApp = findViewById<Button>(R.id.btn_AddElement)
         btn_IniciarApp.setOnClickListener{
-
+            //Conectamos el intent con la activity de home
+            val intent = Intent(this, home_app::class.java)
         }
     }
 }
