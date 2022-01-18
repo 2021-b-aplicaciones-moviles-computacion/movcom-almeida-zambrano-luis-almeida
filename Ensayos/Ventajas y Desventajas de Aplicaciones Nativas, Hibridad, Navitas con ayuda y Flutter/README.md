@@ -1,4 +1,4 @@
-# Ventajas y Desventajas de Aplicaciones Nativas, Hibridad, Nativas con ayuda y Flutter
+# Ventajas y Desventajas de Aplicaciones Nativas, Hibridas, Nativas con ayuda y Flutter
 
 ---
 
