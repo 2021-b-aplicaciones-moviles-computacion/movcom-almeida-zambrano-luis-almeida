@@ -3,12 +3,12 @@ package com.example.appcertificados
 import android.os.Parcel
 import android.os.Parcelable
 
-class Persona (
+class Persona(
     val id_persona: Int,
     var nombre: String?,
     var edad: String?,
     var correo: String?
-    ) : Parcelable {
+) : Parcelable {
     override fun toString(): String {
         return "${nombre}"
     }
@@ -18,7 +18,8 @@ class Persona (
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
-    ){}
+    ) {
+    }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(id_persona)

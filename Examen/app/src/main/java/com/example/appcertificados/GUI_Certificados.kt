@@ -22,22 +22,22 @@ class GUI_Certificados : AppCompatActivity() {
 
     var AddNewCertificado = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
-    ){ result ->
-        if (result.resultCode == Activity.RESULT_OK){
-            if(result.data != null) {
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            if (result.data != null) {
                 val data = result.data
-                posPersona = data?.getIntExtra("posPersona",0)!!
+                posPersona = data?.getIntExtra("posPersona", 0)!!
             }
         }
     }
 
     var EditarCertificado = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
-    ){ result ->
-        if (result.resultCode == Activity.RESULT_OK){
-            if(result.data != null) {
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            if (result.data != null) {
                 val data = result.data
-                posPersona = data?.getIntExtra("posPersona",0)!!
+                posPersona = data?.getIntExtra("posPersona", 0)!!
             }
         }
     }
@@ -50,40 +50,39 @@ class GUI_Certificados : AppCompatActivity() {
     }
 
 
-
     override fun onStart() {
         super.onStart()
         Log.i("ciclo-vida", "onStart")
 
         list_certificado = arrayListOf()
 
-        posPersona = intent.getIntExtra("posEditar",1)
+        posPersona = intent.getIntExtra("posEditar", 1)
 
-        Log.i("posPersona","${posPersona}")
+        Log.i("posPersona", "${posPersona}")
 
         var idCertificado = arrayListOf<Int>()
 
         val tv_nombre = findViewById<TextView>(R.id.tv_nombre)
 
 
-        BDMemoria.arr_persona.forEachIndexed{ indice: Int, persona : Persona ->
-            Log.i("testExamen","${persona.id_persona} -> ${persona.nombre}")
-            if (indice == posPersona){
+        BDMemoria.arr_persona.forEachIndexed { indice: Int, persona: Persona ->
+            Log.i("testExamen", "${persona.id_persona} -> ${persona.nombre}")
+            if (indice == posPersona) {
                 idPersonaOwner = persona.id_persona
                 var label = "Persona: ${persona.nombre}"
                 tv_nombre.setText(label)
             }
         }
 
-        BDMemoria.arr_persona_x_certificado.forEachIndexed{ indice: Int, Persona_x_Certificado : Persona_x_Certificado ->
-            if (idPersonaOwner == Persona_x_Certificado.id_persona){
+        BDMemoria.arr_persona_x_certificado.forEachIndexed { indice: Int, Persona_x_Certificado: Persona_x_Certificado ->
+            if (idPersonaOwner == Persona_x_Certificado.id_persona) {
                 idCertificado.add(Persona_x_Certificado.id_certificado)
             }
         }
 
-        idCertificado.forEach{ idCertificado:Int ->
-            BDMemoria.arr_certificado.forEachIndexed{ indice: Int, certificado : Certificado ->
-                if (idCertificado == certificado.id_certificado){
+        idCertificado.forEach { idCertificado: Int ->
+            BDMemoria.arr_certificado.forEachIndexed { indice: Int, certificado: Certificado ->
+                if (idCertificado == certificado.id_certificado) {
                     list_certificado.add(certificado.nombre_curso.toString())
                 }
             }
@@ -115,11 +114,13 @@ class GUI_Certificados : AppCompatActivity() {
         }
 
 
-
         //BOTON PARA ACTUALIZAR LA LISTA
         btn_Reload.setOnClickListener {
-            BDMemoria.arr_persona_x_certificado.forEach{PersonaxCertificado: Persona_x_Certificado ->
-                Log.i("More Certificados","${PersonaxCertificado.id_persona} -> ${PersonaxCertificado.id_certificado}")
+            BDMemoria.arr_persona_x_certificado.forEach { PersonaxCertificado: Persona_x_Certificado ->
+                Log.i(
+                    "More Certificados",
+                    "${PersonaxCertificado.id_persona} -> ${PersonaxCertificado.id_certificado}"
+                )
             }
         }
 
@@ -138,8 +139,8 @@ class GUI_Certificados : AppCompatActivity() {
         val info = menuInfo as AdapterView.AdapterContextMenuInfo
         val id = info.position
         val nombre_curso: String = list_certificado.elementAt(id)
-        BDMemoria.arr_certificado.forEach{ certificado: Certificado ->
-            if(nombre_curso == certificado.nombre_curso){
+        BDMemoria.arr_certificado.forEach { certificado: Certificado ->
+            if (nombre_curso == certificado.nombre_curso) {
                 idItemSeleccionado = certificado.id_certificado
             }
         }
@@ -167,7 +168,7 @@ class GUI_Certificados : AppCompatActivity() {
     ) {
         val intentEditarCertificado = Intent(this, clase)
         intentEditarCertificado.putExtra("idPersona", idItemSeleccionado)
-        intentEditarCertificado.putExtra("posPersona_Edit",posPersona)
+        intentEditarCertificado.putExtra("posPersona_Edit", posPersona)
         EditarCertificado.launch(intentEditarCertificado)
     }
 
@@ -175,30 +176,33 @@ class GUI_Certificados : AppCompatActivity() {
         clase: Class<*>
     ) {
         val intentAddNewCertificado = Intent(this, clase)
-        intentAddNewCertificado.putExtra("posPersona",posPersona)
-        Log.i("positionSend","${posPersona}")
+        intentAddNewCertificado.putExtra("posPersona", posPersona)
+        Log.i("positionSend", "${posPersona}")
         AddNewCertificado.launch(intentAddNewCertificado)
     }
 
     fun eliminarCertificado(
         idCertificadoAeliminar: Int
-    ){
-        val  lv_certificados= findViewById<ListView>(R.id.lv_certificados)
+    ) {
+        val lv_certificados = findViewById<ListView>(R.id.lv_certificados)
         var nombreCertificadoAeliminar = ""
 
-        BDMemoria.arr_certificado.forEach{ certificado: Certificado ->
-            if(idCertificadoAeliminar == certificado.id_certificado){
+        BDMemoria.arr_certificado.forEach { certificado: Certificado ->
+            if (idCertificadoAeliminar == certificado.id_certificado) {
                 nombreCertificadoAeliminar = certificado.nombre_curso.toString()
             }
         }
 
         val list_certificados_restantes = arrayListOf<Persona_x_Certificado>()
-        Log.i("idCertificadoAeliminar","${idCertificadoAeliminar}")
+        Log.i("idCertificadoAeliminar", "${idCertificadoAeliminar}")
 
-        BDMemoria.arr_persona_x_certificado.forEachIndexed{ indice: Int, PersonaxCertificado: Persona_x_Certificado->
-            if(!((idCertificadoAeliminar == PersonaxCertificado.id_certificado) and (idPersonaOwner == PersonaxCertificado.id_persona))){
+        BDMemoria.arr_persona_x_certificado.forEachIndexed { indice: Int, PersonaxCertificado: Persona_x_Certificado ->
+            if (!((idCertificadoAeliminar == PersonaxCertificado.id_certificado) and (idPersonaOwner == PersonaxCertificado.id_persona))) {
                 list_certificados_restantes.add(PersonaxCertificado)
-                Log.i("EliminarCertificado","${PersonaxCertificado.id_persona} -> ${PersonaxCertificado.id_certificado}")
+                Log.i(
+                    "EliminarCertificado",
+                    "${PersonaxCertificado.id_persona} -> ${PersonaxCertificado.id_certificado}"
+                )
             }
         }
 

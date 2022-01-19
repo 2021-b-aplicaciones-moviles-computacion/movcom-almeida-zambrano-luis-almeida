@@ -3,10 +3,10 @@ package com.example.appcertificados
 import android.os.Parcel
 import android.os.Parcelable
 
-class Certificado (
+class Certificado(
 
     val id_certificado: Int,
-    var nombre_curso:String?,
+    var nombre_curso: String?,
     var nombre_plataforma: String?,
     var fecha: String?
 

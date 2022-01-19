@@ -3,7 +3,7 @@ package com.example.appcertificados
 import android.os.Parcel
 import android.os.Parcelable
 
-class Persona_x_Certificado (
+class Persona_x_Certificado(
 
     val id_persona: Int,
     val id_certificado: Int
