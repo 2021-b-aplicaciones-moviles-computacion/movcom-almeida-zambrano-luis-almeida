@@ -22,18 +22,18 @@ class Add_Persona : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.i("ciclo-vida","onStart")
+        Log.i("ciclo-vida", "onStart")
 
         var len_ListaPersona = BDMemoria.arr_persona.lastIndex
 
-        BDMemoria.arr_persona.forEachIndexed{ indice: Int, persona : Persona ->
-            Log.i("testExamen","${persona.id_persona} -> ${persona.nombre}")
-            if (indice == len_ListaPersona){
+        BDMemoria.arr_persona.forEachIndexed { indice: Int, persona: Persona ->
+            Log.i("testExamen", "${persona.id_persona} -> ${persona.nombre}")
+            if (indice == len_ListaPersona) {
                 lastId = persona.id_persona
             }
         }
 
-        nextId = lastId+1
+        nextId = lastId + 1
 
         var txt_nombre = findViewById<TextInputEditText>(R.id.ti_nombre_certificado)
         var txt_edad = findViewById<TextInputEditText>(R.id.ti_addedad)
@@ -46,7 +46,7 @@ class Add_Persona : AppCompatActivity() {
             mail = txt_nombre.text.toString()
 
             //Agregamos una nueva persona a la BD en memoria
-            BDMemoria.arr_persona.add(Persona(nextId,nombre,edad,mail))
+            BDMemoria.arr_persona.add(Persona(nextId, nombre, edad, mail))
 
             //Actualizamos la lista del Home
             val intentAddSucces = Intent(this, home_app::class.java)

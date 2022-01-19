@@ -104,8 +104,8 @@ class home_app : AppCompatActivity() {
 
         var dummy_list = arrayListOf<Persona_x_Certificado>()
 
-        BDMemoria.arr_persona_x_certificado.forEachIndexed{ indice: Int, personaxcertificado: Persona_x_Certificado ->
-            if(idPersonaDele != personaxcertificado.id_persona){
+        BDMemoria.arr_persona_x_certificado.forEachIndexed { indice: Int, personaxcertificado: Persona_x_Certificado ->
+            if (idPersonaDele != personaxcertificado.id_persona) {
                 dummy_list.add(personaxcertificado)
             }
         }
