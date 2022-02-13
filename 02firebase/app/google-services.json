@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "606496409267",
+    "project_id": "b-mov-com-almeidaluis",
+    "storage_bucket": "b-mov-com-almeidaluis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606496409267:android:6f34ec9a6726b285ab12c6",
+        "android_client_info": {
+          "package_name": "com.example.a02firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "606496409267-ids51mu0tkkqqru6ol0bqv7eb9d8qa7b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqB1VmfY1gaxr2hTgjmmrLczwuZC1m48A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "606496409267-ids51mu0tkkqqru6ol0bqv7eb9d8qa7b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
