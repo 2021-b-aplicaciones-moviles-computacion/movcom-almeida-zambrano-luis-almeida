@@ -2,8 +2,12 @@ package com.example.clonwhatsapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.clonwhatsapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
 
     val datos_chat = listOf(
         ChatData(
@@ -27,12 +31,19 @@ class MainActivity : AppCompatActivity() {
             "La fecha del archivo es: March 23, 2013",
             2,
             "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-        ),
-
+        )
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        initRecycler()
+    }
+
+    fun initRecycler(){
+        binding.rvChats.layoutManager = LinearLayoutManager(this)
+        val adapter = ChatAdapter(datos_chat)
+        binding.rvChats.adapter = adapter
     }
 }
