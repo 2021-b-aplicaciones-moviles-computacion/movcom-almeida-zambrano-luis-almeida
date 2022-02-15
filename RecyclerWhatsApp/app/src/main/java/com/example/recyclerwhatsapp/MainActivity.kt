@@ -1,5 +1,6 @@
 package com.example.recyclerwhatsapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -10,6 +11,7 @@ import com.example.recyclerwhatsapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initRecyclerView()
+
     }
 
     fun initRecyclerView(){
@@ -31,6 +34,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onItemSelected(chat: Chat){
-        Toast.makeText(this, chat.nombre_usuario, Toast.LENGTH_SHORT).show()
+        val intent = Intent(this,ChatActivity::class.java )
+        intent.putExtra("INTENT_Photo", chat.photo_usuario)
+        intent.putExtra("INTENT_NombreContacto", chat.nombre_usuario)
+        intent.putExtra("INTENT_ultVez", chat.ultima_vez)
+        intent.putExtra("INTENT_Mensaje", chat.contenido_mensaje)
+        intent.putExtra("INTENT_cantidad", chat.cantidad)
+
+        startActivity(intent)
     }
 }

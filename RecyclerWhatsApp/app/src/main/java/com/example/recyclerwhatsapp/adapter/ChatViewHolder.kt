@@ -15,8 +15,13 @@ class ChatViewHolder(view: View):RecyclerView.ViewHolder(view) {
 
     fun render(chatModel: Chat, onClickListener:(Chat)-> Unit){
 
+        //Cargamos la Foto
+        Glide.with(binding.ivphoto.context).load(chatModel.photo_usuario).into(binding.ivphoto)
+
+        //Cargamos el nombre
         binding.tvNombreContacto.text = chatModel.nombre_usuario
 
+        //Cargamos el mensaje
         if(chatModel.contenido_mensaje.length >= 57){
             var msg: String = ""
             for (i in 0..51){
@@ -28,12 +33,18 @@ class ChatViewHolder(view: View):RecyclerView.ViewHolder(view) {
             binding.tvMensaje.text = chatModel.contenido_mensaje
         }
 
+        //Cargamos la hora del mensaje
         binding.tvHora.text = chatModel.hora_mensaje
-        binding.tvCantidad.text = "3"
-        Glide.with(binding.ivphoto.context).load(chatModel.photo_usuario).into(binding.ivphoto)
+
+        if(chatModel.nuevo_mensaje==true){
+            binding.tvCantidad.visibility = View.VISIBLE
+            binding.tvCantidad.text = chatModel.cantidad.toString()
+            binding.ivNewMessage.visibility = View.VISIBLE
+        }
 
 
         itemView.setOnClickListener { onClickListener(chatModel)}
 
     }
+
 }
