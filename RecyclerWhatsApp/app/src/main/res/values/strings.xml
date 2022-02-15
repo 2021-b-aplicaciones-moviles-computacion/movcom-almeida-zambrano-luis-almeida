@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">RecyclerWhatsApp</string>
+    <string name="NombreApp">WhatsApp</string>
+    <string name="Chats">Chats</string>
+    <string name="Estados">Estados</string>
+    <string name="Llamadas">Llamadas</string>
 </resources>

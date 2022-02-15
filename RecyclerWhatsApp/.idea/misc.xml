@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/RecyclerWhatsApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/RecyclerWhatsApp/app/src/main/res/layout/item_superhero.xml" value="0.9" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/RecyclerWhatsApp/app/src/main/res/drawable/img_men-1_background.xml" value="0.2165" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/RecyclerWhatsApp/app/src/main/res/drawable/line.xml" value="0.2165" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/RecyclerWhatsApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/RecyclerWhatsApp/app/src/main/res/layout/item_chat.xml" value="0.33" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/RecyclerWhatsApp/app/src/main/res/mipmap-anydpi-v26/img_men-1.xml" value="0.2125" />
       </map>
     </option>
   </component>
