@@ -18,7 +18,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         initRecyclerView()
+
+        binding.textView3.setOnClickListener {
+            initEstados()
+        }
+
+
 
     }
 
@@ -41,6 +48,11 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("INTENT_Mensaje", chat.contenido_mensaje)
         intent.putExtra("INTENT_cantidad", chat.cantidad)
 
+        startActivity(intent)
+    }
+
+    fun initEstados(){
+        val intent = Intent(this, Historias::class.java)
         startActivity(intent)
     }
 }

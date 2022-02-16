@@ -2,6 +2,7 @@ package com.example.recyclerwhatsapp.adapter
 
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.recyclerwhatsapp.Chat
@@ -13,7 +14,7 @@ class ChatViewHolder(view: View):RecyclerView.ViewHolder(view) {
 
     val binding = ItemChatBinding.bind(view)
 
-    fun render(chatModel: Chat, onClickListener:(Chat)-> Unit){
+    fun render(chatModel: Chat, onClickListener:(Chat)-> Unit, position: Int){
 
         //Cargamos la Foto
         Glide.with(binding.ivphoto.context).load(chatModel.photo_usuario).into(binding.ivphoto)
@@ -40,6 +41,7 @@ class ChatViewHolder(view: View):RecyclerView.ViewHolder(view) {
             binding.tvCantidad.visibility = View.VISIBLE
             binding.tvCantidad.text = chatModel.cantidad.toString()
             binding.ivNewMessage.visibility = View.VISIBLE
+
         }
 
 

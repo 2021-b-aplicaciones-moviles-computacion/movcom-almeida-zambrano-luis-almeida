@@ -17,9 +17,8 @@ class ChatAdapter(val chatList:List<Chat>, private val onClickListener:(Chat)-> 
     }
 
     override fun onBindViewHolder(holder: ChatViewHolder, position: Int) {
-        println("SE IMPRIME 2")
         val item = chatList[position]
-        holder.render(item, onClickListener)
+        holder.render(item, onClickListener, position)
     }
 
     override fun getItemCount(): Int = chatList.size
