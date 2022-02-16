@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="73dp"
+    android:background="@color/backgroundWp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivPhotoHistoria"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:src="@color/Notification"
+        app:civ_border_color="@color/Titulo"
+        app:civ_border_width="2.5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvUsuarioHistoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="TextView"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/ivPhotoHistoria"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Abadala Bucaram, RC5" />
+
+    <TextView
+        android:id="@+id/tvHoraHistoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        android:textColor="@color/Titulo"
+        app:layout_constraintStart_toEndOf="@+id/ivPhotoHistoria"
+        app:layout_constraintTop_toBottomOf="@+id/tvUsuarioHistoria"
+        tools:text="hoy a la(s) 18:04" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

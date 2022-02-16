@@ -1,12 +1,12 @@
 package com.example.recyclerwhatsapp
 
 class HistoriaProvider {
-    companion object
+    companion object{
     val historiaList = listOf(
         Historia(
             "Nombre Historia 1",
             "hace 8 minutos",
-            "http://images3.memedroid.com/images/UPLOADED697/5b2fbceb665f7.jpeg"
+            "https://rickandmortyapi.com/api/character/avatar/44.jpeg"
         ),
         Historia(
             "Nombre Historia 2",
@@ -54,4 +54,6 @@ class HistoriaProvider {
             "https://rickandmortyapi.com/api/character/avatar/32.jpeg"
         ),
     )
+
+    }
 }

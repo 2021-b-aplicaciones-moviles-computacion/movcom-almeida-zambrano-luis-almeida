@@ -3,8 +3,10 @@ package com.example.recyclerwhatsapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.recyclerwhatsapp.adapter.ChatAdapter
+import com.example.recyclerwhatsapp.adapter.HistoriasAdapter
 import com.example.recyclerwhatsapp.databinding.ActivityHistoriasBinding
-import com.example.recyclerwhatsapp.databinding.ActivityMainBinding
 
 class Historias : AppCompatActivity() {
 
@@ -15,6 +17,8 @@ class Historias : AppCompatActivity() {
         binding = ActivityHistoriasBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        initRecyclerView()
+
         binding.textView2.setOnClickListener {
             layoutChats()
         }
@@ -22,6 +26,26 @@ class Historias : AppCompatActivity() {
 
     fun layoutChats(){
         val intent = Intent(this, MainActivity::class.java )
+        startActivity(intent)
+    }
+
+    fun initRecyclerView(){
+
+        binding.rvHistorias.layoutManager = LinearLayoutManager(this)
+        binding.rvHistorias.adapter =
+            HistoriasAdapter(HistoriaProvider.historiaList) { historia ->
+                onItemSelected(
+                    historia
+                )
+            }
+    }
+
+    fun onItemSelected(historia: Historia){
+
+        val intent = Intent(this, VistaHistoria::class.java)
+        intent.putExtra("INTENT_NombreUsuario", historia.nombre_usuario)
+        intent.putExtra("INTENT_HoraHistoria", historia.hora_historia)
+        intent.putExtra("INTENT_PhotoHistoria", historia.photo_historia)
         startActivity(intent)
     }
 }
