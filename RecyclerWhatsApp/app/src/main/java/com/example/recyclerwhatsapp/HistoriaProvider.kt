@@ -53,6 +53,36 @@ class HistoriaProvider {
             "hoy a la(s) 21:25",
             "https://rickandmortyapi.com/api/character/avatar/32.jpeg"
         ),
+        Historia(
+            "Nombre Historia 8",
+            "hoy a la(s) 21:48",
+            "https://rickandmortyapi.com/api/character/avatar/30.jpeg"
+        ),
+        Historia(
+            "Nombre Historia 9",
+            "hoy a la(s) 21:40",
+            "https://rickandmortyapi.com/api/character/avatar/31.jpeg"
+        ),
+        Historia(
+            "Nombre Historia 10",
+            "hoy a la(s) 21:25",
+            "https://rickandmortyapi.com/api/character/avatar/32.jpeg"
+        ),
+        Historia(
+            "Nombre Historia 8",
+            "hoy a la(s) 21:48",
+            "https://rickandmortyapi.com/api/character/avatar/30.jpeg"
+        ),
+        Historia(
+            "Nombre Historia 9",
+            "hoy a la(s) 21:40",
+            "https://rickandmortyapi.com/api/character/avatar/31.jpeg"
+        ),
+        Historia(
+            "Nombre Historia 10",
+            "hoy a la(s) 21:25",
+            "https://rickandmortyapi.com/api/character/avatar/32.jpeg"
+        )
     )
 
     }

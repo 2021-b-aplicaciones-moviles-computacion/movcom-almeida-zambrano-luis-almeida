@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.example.recyclerwhatsapp.adapter.ChatAdapter
 import com.example.recyclerwhatsapp.adapter.HistoriasAdapter
 import com.example.recyclerwhatsapp.databinding.ActivityHistoriasBinding
@@ -16,6 +17,8 @@ class Historias : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHistoriasBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        Glide.with(binding.ivPhotoHistoria2.context).load("https://rickandmortyapi.com/api/character/avatar/65.jpeg").into(binding.ivPhotoHistoria2)
 
         initRecyclerView()
 
