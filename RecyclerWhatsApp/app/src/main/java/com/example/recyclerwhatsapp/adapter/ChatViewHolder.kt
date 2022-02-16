@@ -41,7 +41,6 @@ class ChatViewHolder(view: View):RecyclerView.ViewHolder(view) {
             binding.tvCantidad.visibility = View.VISIBLE
             binding.tvCantidad.text = chatModel.cantidad.toString()
             binding.ivNewMessage.visibility = View.VISIBLE
-
         }
 
 
