@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     fun initRecyclerView(){
 
-        binding.rvChat.layoutManager = LinearLayoutManager(this)
+        binding.rvChat.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.rvChat.adapter =
             ChatAdapter(ChatProvider.chatList) {chat ->
                 onItemSelected(
