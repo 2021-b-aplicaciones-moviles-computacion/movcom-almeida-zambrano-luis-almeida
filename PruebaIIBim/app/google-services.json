@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "48951401102",
+    "project_id": "almeidaluiseiib",
+    "storage_bucket": "almeidaluiseiib.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48951401102:android:7274ebf85d61b9b139c7df",
+        "android_client_info": {
+          "package_name": "com.example.pruebaiibim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48951401102-upigmvcntb31s2nq2856cnns8rfs578p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYIpF6m7aVXbrtJw80NvIbPuh3j2Hx9KA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48951401102-upigmvcntb31s2nq2856cnns8rfs578p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
