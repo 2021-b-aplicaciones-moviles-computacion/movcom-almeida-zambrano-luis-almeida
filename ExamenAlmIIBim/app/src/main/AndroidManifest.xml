@@ -10,6 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamenAlmIIBim">
         <activity
+            android:name=".HomeCertificados"
+            android:exported="false" />
+        <activity
+            android:name=".ViewCertificados"
+            android:exported="false" />
+        <activity
+            android:name=".AddPersona"
+            android:exported="false" />
+        <activity
+            android:name=".EditarCertificado"
+            android:exported="false" />
+        <activity
+            android:name=".AddCertificado"
+            android:exported="false" />
+        <activity
+            android:name=".EditarPersona"
+            android:exported="false" />
+        <activity
+            android:name=".HomeApp"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

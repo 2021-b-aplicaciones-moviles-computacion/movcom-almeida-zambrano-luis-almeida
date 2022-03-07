@@ -3,7 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ExamenAlmIIBim/app/src/main/res/layout/activity_main.xml" value="0.1953125" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ExamenAlmIIBim/app/src/main/res/layout/activity_add_certificado.xml" value="0.4934782608695652" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ExamenAlmIIBim/app/src/main/res/layout/activity_add_persona.xml" value="0.209375" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ExamenAlmIIBim/app/src/main/res/layout/activity_editar_certificado.xml" value="0.5" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ExamenAlmIIBim/app/src/main/res/layout/activity_editar_persona.xml" value="0.33" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ExamenAlmIIBim/app/src/main/res/layout/activity_home_app.xml" value="0.25" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ExamenAlmIIBim/app/src/main/res/layout/activity_home_certificados.xml" value="0.209375" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ExamenAlmIIBim/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ExamenAlmIIBim/app/src/main/res/layout/activity_view_certificados.xml" value="0.33" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ExamenAlmIIBim/app/src/main/res/menu/menu.xml" value="0.209375" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ExamenAlmIIBim/app/src/main/res/menu/mn_certificados.xml" value="0.209375" />
       </map>
     </option>
   </component>
