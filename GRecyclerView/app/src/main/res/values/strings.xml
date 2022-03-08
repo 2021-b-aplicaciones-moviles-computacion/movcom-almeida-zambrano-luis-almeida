@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">GRecyclerView</string>
-    <string name="lbl_siguiente">Siguiente</string>
-    <string name="lbl_anterior">Anterior</string>
-
-</resources>
