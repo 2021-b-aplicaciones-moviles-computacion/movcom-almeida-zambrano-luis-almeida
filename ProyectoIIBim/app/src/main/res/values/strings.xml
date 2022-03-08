@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ProyectoIIBim</string>
+
+    <string name="Str1">String 1</string>
+    <string name="Str2">String 2</string>
+    <string name="Str3">String 3</string>
+    <string name="Str4">String 4</string>
+
+    <string name="AddItem">Agregar Item</string>
+    <string name="SearchItem">Buscar Item</string>
+
 </resources>

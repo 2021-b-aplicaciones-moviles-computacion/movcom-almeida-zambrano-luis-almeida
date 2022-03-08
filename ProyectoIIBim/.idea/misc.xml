@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ProyectoIIBim/app/src/main/res/drawable/bg_h_card.xml" value="0.2165" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ProyectoIIBim/app/src/main/res/layout/activity_add_carrera.xml" value="0.22" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ProyectoIIBim/app/src/main/res/layout/activity_home_app.xml" value="0.209375" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ProyectoIIBim/app/src/main/res/layout/activity_main.xml" value="0.20615384615384616" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ProyectoIIBim/app/src/main/res/layout/activity_view_carrera.xml" value="0.33" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ProyectoIIBim/app/src/main/res/layout/bg_h_card.xml" value="0.209375" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ProyectoIIBim/app/src/main/res/layout/item_carrera.xml" value="0.83451536643026" />
+        <entry key="..\:/AppMoviles/movcom-almeida-zambrano-luis-almeida/ProyectoIIBim/app/src/main/res/menu/bottom_app_bar.xml" value="0.209375" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

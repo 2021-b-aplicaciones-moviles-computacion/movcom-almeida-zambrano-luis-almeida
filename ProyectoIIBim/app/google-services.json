@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "281486340163",
+    "project_id": "proyectoiibim-5dc55",
+    "storage_bucket": "proyectoiibim-5dc55.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281486340163:android:f9d1a6754557067e51a4f6",
+        "android_client_info": {
+          "package_name": "com.example.proyectoiibim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281486340163-nqpd43anc7t4vh8817vevosugg992lb0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyos82KZ3wVu3AhwzH46a7eZ2m9ZfWuWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281486340163-nqpd43anc7t4vh8817vevosugg992lb0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
